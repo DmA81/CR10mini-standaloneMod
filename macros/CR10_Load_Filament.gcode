@@ -1,0 +1,7 @@
+M117 Loading filament...
+G21
+G90
+G92 E0
+G1 E400 F1000
+G92 E0
+M117 Done
