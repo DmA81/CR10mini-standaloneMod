@@ -21,8 +21,6 @@
  */
 #pragma once
 
-#define CONFIG_EXAMPLES_DIR "Creality/CR-10mini/CrealityV1"
-
 /**
  * Configuration.h
  *
@@ -506,9 +504,9 @@
     #define DEFAULT_Kd_LIST {  73.96,  73.96 }
   #else
     // Stock CR-10 tuned for 195C
-    #define DEFAULT_Kp 22.9
-    #define DEFAULT_Ki 1.53
-    #define DEFAULT_Kd 85.8
+    #define DEFAULT_Kp 23.5
+    #define DEFAULT_Ki 1.55
+    #define DEFAULT_Kd 89.1
   #endif
 #endif // PIDTEMP
 
@@ -545,10 +543,10 @@
   //#define MIN_BED_POWER 0
   //#define PID_BED_DEBUG // Sends debug data to the serial port.
 
-  // Stock CR-10 Bed Tuned for 45C
-  #define DEFAULT_bedKp 27.3
-  #define DEFAULT_bedKi 5.1
-  #define DEFAULT_bedKd 99.3
+  // Stock CR-10 Bed Tuned for 60c
+  #define DEFAULT_bedKp 70.9
+  #define DEFAULT_bedKi 12.81
+  #define DEFAULT_bedKd 261.4
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -617,13 +615,8 @@
 //#define COREZY
 //#define MARKFORGED_XY  // MarkForged. See https://reprap.org/forum/read.php?152,504042
 
-//===========================================================================
-//============================== Endstop Settings ===========================
-//===========================================================================
+//===========================================================================#define CONFIG_EXAMPLES_DIR "Creality/CR-10mini/CrealityV1"
 
-// @section homing
-
-// Specify here all the endstop connectors that are connected to any endstop or probe.
 // Almost all printers will be using one per axis. Probes will use one or more of the
 // extra connectors. Leave undefined any used for non-endstop and non-probe purposes.
 #define USE_XMIN_PLUG
@@ -1099,7 +1092,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR true
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
